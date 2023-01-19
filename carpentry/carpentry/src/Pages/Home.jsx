@@ -32,7 +32,7 @@ Shop By Room
 
   <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(4, 1fr)" }}
-        templateRows={{ base: "repeat(4,220px)", lg: "repeat(1,100px)" }}
+        templateRows={{ base: "repeat(4,250px)", lg: "repeat(1,100px)" }}
         gap={{base:2,lg:3}}
         >
         <GridItem ><Image src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section4_web_04012023_1.jpg"/><Text fontSize='xl'>Shop Living Room</Text></GridItem>
@@ -53,7 +53,7 @@ Shop By Room
       </Heading>
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(4, 1fr)" }}
-        templateRows={{ base: "repeat(4,220px)", lg: "repeat(1,100px)" }}
+        templateRows={{ base: "repeat(4,400px)", lg: "repeat(1,100px)" }}
         gap={{base:2,lg:3}}
         marginTop="5px"
         textAlign={"left"}
@@ -74,7 +74,7 @@ Shop By Room
       </Heading>
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(3, 1fr)" }}
-        templateRows={{ base: "repeat(3,220px)", lg: "repeat(1,100px)" }}
+        templateRows={{ base: "repeat(3,400px)", lg: "repeat(1,100px)" }}
         gap={{base:2,lg:3}}
         marginTop="15px"
         textAlign={"left"}
@@ -92,7 +92,7 @@ Shop By Room
       </Heading>
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(4, 1fr)" }}
-        templateRows={{ base: "repeat(4,220px)", lg: "repeat(1,100px)" }}
+        templateRows={{ base: "repeat(4,430px)", lg: "repeat(1,100px)" }}
         gap={{base:2,lg:3}}
         marginTop="5px"
         textAlign={"left"}
@@ -113,7 +113,7 @@ Shop By Room
       </Heading>
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(3, 1fr)" }}
-        templateRows={{ base: "repeat(3,220px)", lg: "repeat(1,100px)" }}
+        templateRows={{ base: "repeat(3,300px)", lg: "repeat(1,100px)" }}
         gap={{base:2,lg:3}}
         marginTop="15px"
         textAlign={"left"}
@@ -131,7 +131,7 @@ Shop By Room
       </Heading>
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(4, 1fr)" }}
-        templateRows={{ base: "repeat(4,220px)", lg: "repeat(1,100px)" }}
+        templateRows={{ base: "repeat(4,400px)", lg: "repeat(1,100px)" }}
         gap={{base:2,lg:3}}
         marginTop="10px"
         textAlign={"left"}
@@ -148,11 +148,11 @@ Shop By Room
       </Container>
       <Container maxW={"7xl"} marginTop="330px">
       <Heading as='h3' size='xl' textAlign="left">
-        Top Brands On Carpentry
+        Inspiration From Our BLog
       </Heading>
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(4, 1fr)" }}
-        templateRows={{ base: "repeat(4,220px)", lg: "repeat(1,100px)" }}
+        templateRows={{ base: "repeat(4,400px)", lg: "repeat(1,100px)" }}
         gap={{base:2,lg:3}}
         marginTop="10px"
         textAlign={"left"}
@@ -191,7 +191,7 @@ Shop By Room
       </Heading>
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(6, 1fr)" }}
-        templateRows={{ base: "repeat(6,220px)", lg: "repeat(1,100px)" }}
+        templateRows={{ base: "repeat(6,350px)", lg: "repeat(1,100px)" }}
         gap={{base:2,lg:3}}
         marginTop="10px"
         textAlign={"left"}
@@ -212,7 +212,7 @@ Shop By Room
       </Heading>
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg:"repeat(6, 1fr)" }}
-        templateRows={{ base:"repeat(6,220px)", lg:"repeat(1,100px)" }}
+        templateRows={{ base:"repeat(6,400px)", lg:"repeat(1,100px)" }}
         gap={{base:2,lg:3}}
         marginTop="10px"
         textAlign={"left"}
