@@ -59,7 +59,7 @@ import {
          
         </Container>
       </div>
-      <Container maxW='8xl'>
+      <Container maxW='8xl' >
       <Flex as="nav" align="center" justify="space-around" wrap="wrap" marginTop="5px" gap="10px" >
         <Flex align="center" mr={5}>
           <Image src={img} width="100px" h="50px" borderRadius="10px" cursor="pointer"/>
