@@ -3,12 +3,16 @@ import {
     Image,
     Box,
     Badge,
-    Text,
-
+   
+    
 } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
+
+
 // import { Link } from "react-router-dom"
 
 export default function ProductCard({ image, id, title, price, rating, count, rate }) {
+  
     return ( <div>
 
 
@@ -66,9 +70,11 @@ export default function ProductCard({ image, id, title, price, rating, count, ra
     </ButtonGroup>
   </CardFooter>
 </Card> */}
+<Link to={`/products/${id}`}>
 <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' textAlign="left">
-      <Image src={image} />
 
+      <Image src={image} />
+      
       <Box p='6'>
       <Box display='flex' alignItems='baseline'>
           <Badge borderRadius='full' px='2' colorScheme='teal'>
@@ -107,10 +113,13 @@ export default function ProductCard({ image, id, title, price, rating, count, ra
           <Box as='span' ml='2' color='gray.600' fontSize='sm'>
             {count} reviews
           </Box>
-          <Text></Text>
+          
         </Box>
+        
       </Box>
-    </Box>   
+      
+    </Box> 
+    </Link>
                 </div>
         
             );

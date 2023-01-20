@@ -5,7 +5,8 @@ import { useEffect } from 'react';
 import { Box, Button,  Checkbox, Grid, GridItem, Text } from '@chakra-ui/react';
 import ProductCard from '../Components/ProductCard';
 import { Loading } from '../Components/Loading';
-
+// import { CartContext } from '../Context/CartContext/CartContextProvider';
+// import { addToCart } from '../Context/CartContext/action';
 
 
 
@@ -16,8 +17,9 @@ const Products = () => {
   const [order,setOrder] = useState("");  // asc or desc
   const [searchQuery,setSearchQuery] = useState("");
   const [loading,setLoading] = useState(true);
+  // const {state,dispatch} = useContext(CartContext)
 
-
+  
 
 
   const getPosts = (searchQuery)=>{
@@ -32,6 +34,13 @@ const Products = () => {
       console.log(err)
     })
   }
+
+  // const itemAlreadyExists =(id,cartItems) =>{
+  //   if(cartItems.find((item)=>item.id===id)){
+  //     return true
+  //   }
+  // }
+
 
   useEffect(()=>{
     getPosts(searchQuery)
@@ -120,7 +129,13 @@ const Products = () => {
                     price={e.price}
                     rating={e.rating.rate}
                     count={e.rating.count}
+                    
                   />
+                  {/* <Button variant='ghost' colorScheme='blue' disabled={itemAlreadyExists(e.id,state)}
+      onClick={()=>dispatch(addToCart(e))}
+      >
+        Add to cart
+      </Button> */}
                 </GridItem>
               )
             })

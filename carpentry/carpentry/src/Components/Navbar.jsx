@@ -23,6 +23,7 @@ import {
  import  {FiShoppingCart} from 'react-icons/fi'
  import {VscAccount} from "react-icons/vsc"
   import img from "../utils/Logo.png"
+import { NavLink } from "react-router-dom";
  
 
 
@@ -62,8 +63,11 @@ import {
       <Container maxW='8xl' >
       <Flex as="nav" align="center" justify="space-around" wrap="wrap" marginTop="5px" gap="10px" >
         <Flex align="center" mr={5}>
+          <NavLink to="/">
           <Image src={img} width="100px" h="50px" borderRadius="10px" cursor="pointer"/>
-        </Flex>
+          </NavLink>
+          </Flex>
+
         <Box
           display={{ base: isOpen ? "block" : "none", md: "block" }}
           width={{ base: "full", md: "auto" }}
@@ -77,8 +81,9 @@ import {
         
         </Box>
         <MdLiveHelp style={{height:"30px", width:"50px"}}/>
-        
+        <Link to="/cart">
         <FiShoppingCart  style={{height:"30px", width:"50px"}}/>
+        </Link>
         <Menu >
                 <MenuButton
                   as={Button}

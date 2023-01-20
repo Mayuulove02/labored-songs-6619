@@ -3,7 +3,7 @@ import React from 'react'
 
 
 const data=[
-    "https://ii1.pepperfry.com/media/wysiwyg/banners/Web_Promo_2x_1601_ND.jpg",
+    "https://ii1.pepperfry.com/media/wysiwyg/banners/Web_Promo_2x_2001_r1.jpg",
     "https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section2_web_04012023_1.jpg",
     "https://ii3.pepperfry.com/media/wysiwyg/banners/Hp_section2_web_04012023_2.jpg",
     "https://ii1.pepperfry.com/media/wysiwyg/banners/Hp_section2_web_04012023_3.jpg",
