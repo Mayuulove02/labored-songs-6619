@@ -71,7 +71,7 @@ import {
           flexGrow={1}
           
         >
-          <Input placeholder='What are you looking for ?' />
+          <Input placeholder='What are you looking for ?' width={600}/>
           
         
         
