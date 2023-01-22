@@ -22,6 +22,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { MdLocalShipping } from 'react-icons/md';
 import { Link, useParams } from 'react-router-dom';
+import { Loading } from '../Components/Loading';
 import Navbar from '../Components/Navbar';
 
 
@@ -29,6 +30,7 @@ import Navbar from '../Components/Navbar';
 
 export default function SingleProductsPage() {
   const [product, setProduct] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const { id } = useParams();
   console.log(id)
@@ -40,8 +42,13 @@ export default function SingleProductsPage() {
 
   const { image, title, price } = product;
 
-
-  return (
+  setTimeout(() => {
+    setIsLoading(false)
+     
+    }, 1000);
+     
+    
+  return  isLoading ? (<Loading />) : (
     <div>
     <Navbar />
       <Container maxW={'7xl'} align="left">
@@ -91,12 +98,12 @@ export default function SingleProductsPage() {
                       direction={'column'}
                       divider={
                           <StackDivider
-                              borderColor={useColorModeValue('gray.200', 'gray.600')}
+                            //   borderColor={useColorModeValue('gray.200', 'gray.600')}
                           />
                       }>
                       <VStack spacing={{ base: 4, sm: 6 }} >
                           <Text
-                              color={useColorModeValue('gray.500', 'gray.400')}
+                            //   color={useColorModeValue('gray.500', 'gray.400')}
                               fontSize={'2xl'}
                               fontWeight={'300'}
                           >

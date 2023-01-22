@@ -43,6 +43,7 @@ import "./Cart.css";
 import { FiShoppingCart } from 'react-icons/fi';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
+import { Loading } from '../Components/Loading';
 
 
 
@@ -50,7 +51,8 @@ import Footer from '../Components/Footer';
 export default function Cart() {
     const [cart ,setCart] = useState({})
     const {id} = useParams();
-    const [count,setCount] = useState(1)
+    const [count,setCount] = useState(1);
+    const [isLoading, setIsLoading] = useState(true);
     
 
    
@@ -70,6 +72,19 @@ export default function Cart() {
     const handleSub =()=>{
         setCount(count-1)
     }
+    setTimeout(() => {
+      setIsLoading(false)
+       
+      }, 1000);
+       
+      if(isLoading){
+
+          return (  
+             <Loading />
+            ) 
+        
+         }
+
     return (
     <div>
       <Navbar />
