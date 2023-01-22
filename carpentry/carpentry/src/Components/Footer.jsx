@@ -50,28 +50,28 @@ const Footer = () => {
       >
         <GridItem marginTop={"20px"} backgroundColor="#f3f5f7" gap="10" >
         <Text fontSize='lg' fontWeight={"bold"}>Popular Categories</Text>
-        <Text fontSize='md' color="#848484">Queen Size Beds, King Size Beds, Coffee Tables, Dining</Text>
-        <Text fontSize='md'color="#848484">Sets, Recliners, Sofa cum Beds, Rocking Chairs, Cabinets,</Text>
-        <Text fontSize='md'color="#848484">Book Shelves, TV Unit, Wardrobes, Outdoor Furniture, Bar</Text>
-        <Text fontSize='md'color="#848484">Cabinets, Wall Shelves, Photo Frames, Bed Sheets,</Text>
-        <Text fontSize='md'color="#848484">Mattresses, Table Cloth, Living Room Furniture, Study</Text>
-        <Text fontSize='md'color="#848484">Furniture, Dining Table, Beds, Sofas, Sofa Set, Trundle Bed</Text>
+        <Text fontSize='md' color="#848484">Queen Size Beds, King Size Beds, Coffee Tables</Text>
+        <Text fontSize='md'color="#848484">Sets, Recliners, Sofa cum Beds, Rocking Chairs</Text>
+        <Text fontSize='md'color="#848484">Book Shelves, TV Unit, Wardrobes, Outdoor </Text>
+        <Text fontSize='md'color="#848484">Cabinets, Wall Shelves, Photo Frames</Text>
+        <Text fontSize='md'color="#848484">Mattresses, Table Cloth, Living Room Furniture</Text>
+        <Text fontSize='md'color="#848484">Furniture, Dining Table, Beds, Sofas, Sofa Set</Text>
         </GridItem>
         <GridItem marginTop={"20px"}>
         <Text fontSize='lg' fontWeight={"bold"}>Popular Brands</Text>
         <Text fontSize='md' color="#848484">Mintwud, Woodsworth, CasaCraft, Amberville,</Text>
-        <Text fontSize='md' color="#848484">Mudramark, Bohemiana, Clouddio, Spacewood, Durian,</Text>
+        <Text fontSize='md' color="#848484">Mudramark, Bohemiana, Clouddio, Spacewood</Text>
         <Text fontSize='md' color="#848484">Green Soul, Godrej Interio, Nilkamal, Orange Tree ,</Text>
-        <Text fontSize='md' color="#848484">HomeTown , Duroflex , Sleepyhead , Peps India , NestAsia ,</Text>
-        <Text fontSize='md' color="#848484">Jaipur Rugs , Obettee , Eliante by Jainsons , @Home ,</Text>
+        <Text fontSize='md' color="#848484">HomeTown , Duroflex , Sleepyhead , Peps India</Text>
+        <Text fontSize='md' color="#848484">Jaipur Rugs , Obettee , Eliante by Jainsons</Text>
         <Text fontSize='md' color="#848484">India Circus by Krsnaa Mehta,</Text>
         </GridItem>
         <GridItem marginTop={"20px"}>
         <Text fontSize='lg' fontWeight={"bold"}>Cities we deliver to</Text>
-        <Text fontSize='md' color="#848484">Bengaluru, Mumbai, Navi Mumbai, Delhi, Hyderabad</Text>
+        <Text fontSize='md' color="#848484">Bengaluru, Mumbai, Navi Mumbai, Delhi</Text>
         <Text fontSize='md' color="#848484">Chennai, Gurgaon, Kolkata, Noida, Goa, Ghaziabad,</Text>
-        <Text fontSize='md' color="#848484">Ahmedabad, Coimbatore, Faridabad, Jaipur, Lucknow,</Text>
-        <Text fontSize='md' color="#848484">Kochi, Visakhapatnam, Chandigarh, Vadodara, Nagpur,</Text>
+        <Text fontSize='md' color="#848484">Ahmedabad, Coimbatore, Faridabad, Jaipur</Text>
+        <Text fontSize='md' color="#848484">Kochi, Visakhapatnam, Chandigarh, Vadodara</Text>
         <Text fontSize='md' color="#848484">Aurangabad and many more</Text>
         </GridItem>
         

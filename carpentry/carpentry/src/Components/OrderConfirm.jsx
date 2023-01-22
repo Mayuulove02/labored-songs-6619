@@ -1,6 +1,7 @@
 import { Button, Container, VStack } from "@chakra-ui/react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 
 
 const OrderConfirm = () => {
@@ -28,6 +29,7 @@ const OrderConfirm = () => {
        
         <Button width="50%"  style={{marginTop:"20px"}}  onClick={()=>navigate("/")} fontSize="x" padding={3} w="50%" border="1px solid grey"> CONTINUE SHOPPING  </Button>
       </VStack>
+      <Footer />
     </div>
   );
 };

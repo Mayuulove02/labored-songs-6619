@@ -5,6 +5,8 @@ import { useEffect } from 'react';
 import { Box, Button,  Checkbox, Grid, GridItem, Text } from '@chakra-ui/react';
 import ProductCard from '../Components/ProductCard';
 import { Loading } from '../Components/Loading';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 // import { CartContext } from '../Context/CartContext/CartContextProvider';
 // import { addToCart } from '../Context/CartContext/action';
 
@@ -75,7 +77,7 @@ const Products = () => {
 
   return (
     <div>
-      
+      <Navbar />
 
       <hr />
       <div className='main-div' style={{
@@ -144,6 +146,7 @@ const Products = () => {
         </Box>
       </div>
       </div>
+      <Footer />
     </div>
   )
 }

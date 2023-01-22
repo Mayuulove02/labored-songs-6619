@@ -22,6 +22,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { MdLocalShipping } from 'react-icons/md';
 import { Link, useParams } from 'react-router-dom';
+import Navbar from '../Components/Navbar';
 
 
 
@@ -41,6 +42,8 @@ export default function SingleProductsPage() {
 
 
   return (
+    <div>
+    <Navbar />
       <Container maxW={'7xl'} align="left">
           
           <SimpleGrid
@@ -447,5 +450,6 @@ export default function SingleProductsPage() {
 
 
       </Container>
+      </div>
   );
 }

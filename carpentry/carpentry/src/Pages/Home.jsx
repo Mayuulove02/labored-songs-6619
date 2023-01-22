@@ -1,12 +1,33 @@
 import { Image } from "@chakra-ui/image";
 import { Container, Grid, GridItem, Heading, Text } from "@chakra-ui/layout";
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "../Components/Carousel";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+import { Loading } from "../Components/Loading";
+import { Link } from "react-router-dom";
 // import {BsArrowRight} from 'react-icons/bs'
 
 const Home = () => {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  setTimeout(() => {
+    setIsLoading(false)
+     
+    }, 1000);
+     
+    if(isLoading){
+
+        return (  
+           <Loading />
+          ) 
+      
+       }
+
   return (
     <div style={{fontFamily:"Manrope,sans-serif"}}>
+      <Navbar />
       <Container maxW="8xl">
         {/* <Grid
           templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
@@ -28,6 +49,7 @@ const Home = () => {
 <Heading as='h3' size='xl' marginTop={10}>
 Shop By Room
   </Heading>
+  <Link to="/products">
   <Container maxW="7xl" marginTop={5}>
 
   <Grid
@@ -45,12 +67,13 @@ Shop By Room
         <GridItem ><Image src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section4_web_04012023_4.jpg"/><Text fontSize='xl'>Shop Study Room</Text></GridItem>
       </Grid>
         </Container>
-       
+        </Link>
       </Container>
       <Container maxW={"7xl"} marginTop="200px">
       <Heading as='h3' size='xl' textAlign="left">
         What the Fry Deals
       </Heading>
+      <Link to="/products">
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(4, 1fr)" }}
         templateRows={{ base: "repeat(4,400px)", lg: "repeat(1,100px)" }}
@@ -67,11 +90,13 @@ Shop By Room
         </GridItem>
         <GridItem ><Image src="https://ii3.pepperfry.com/media/wysiwyg/banners/HP_Deal_web_18012023_2.jpg"/><Text fontSize='2xl' as={"bold"}>For ₹59 at 82% Off</Text><Text fontSize='lg' color="#848484">Money Plant With Pot</Text></GridItem>
       </Grid>
+      </Link>
       </Container>
       <Container maxW="7xl" marginTop="350px">
       <Heading as='h3' size='xl' textAlign="left">
         Trends in Furniture And Decor
       </Heading>
+      <Link to="/products">
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(3, 1fr)" }}
         templateRows={{ base: "repeat(3,400px)", lg: "repeat(1,100px)" }}
@@ -85,11 +110,13 @@ Shop By Room
         </GridItem>
         <GridItem ><Image src="https://ii3.pepperfry.com/media/wysiwyg/banners/Hp_section6_web_04012023_3.jpg"/><Text fontSize='2xl' as={"bold"}>Maximalist Pieces By Chumbak</Text><Text fontSize='lg' color="#848484">Explore Starting ₹4495</Text></GridItem>
       </Grid>
+      </Link>
       </Container>
       <Container maxW={"7xl"} marginTop="400px">
       <Heading as='h3' size='xl' textAlign="left">
         New Arrivals
       </Heading>
+      <Link to="/products">
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(4, 1fr)" }}
         templateRows={{ base: "repeat(4,430px)", lg: "repeat(1,100px)" }}
@@ -106,11 +133,13 @@ Shop By Room
         </GridItem>
         <GridItem ><Image src="https://ii1.pepperfry.com/media/wysiwyg/banners/Hp_newarrival_17012023_web.jpg"/><Text fontSize='2xl' as={"bold"}>Upholstered Beds</Text><Text fontSize='lg' color="#848484">70+ Options</Text><Text fontSize='lg' color="#848484" fontFamily={"Manrope,sans-serif"}>Starting ₹9199</Text></GridItem>
       </Grid>
+      </Link>
       </Container>
       <Container maxW="7xl" marginTop="350px">
       <Heading as='h3' size='xl' textAlign="left">
         The Winter Edit
       </Heading>
+      <Link to="/products">
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(3, 1fr)" }}
         templateRows={{ base: "repeat(3,300px)", lg: "repeat(1,100px)" }}
@@ -124,11 +153,13 @@ Shop By Room
         </GridItem>
         <GridItem ><Image src="https://ii1.pepperfry.com/media/wysiwyg/banners/Hp_section8_web_04012023_3.jpg"/></GridItem>
       </Grid>
+      </Link>
       </Container>
       <Container maxW={"7xl"} marginTop="350px">
       <Heading as='h3' size='xl' textAlign="left">
         Top Brands On Carpentry
       </Heading>
+      <Link to="/products">
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(4, 1fr)" }}
         templateRows={{ base: "repeat(4,400px)", lg: "repeat(1,100px)" }}
@@ -145,11 +176,13 @@ Shop By Room
         </GridItem>
         <GridItem ><Image src="https://ii2.pepperfry.com/media/wysiwyg/banners/Hp_section9_web_04012023_4.jpg"/><Text fontSize='2xl' as={"bold"}>Popular For Serveware</Text><Text fontSize='lg' color="#848484">120+ Options</Text></GridItem>
       </Grid>
+      </Link>
       </Container>
       <Container maxW={"7xl"} marginTop="330px">
       <Heading as='h3' size='xl' textAlign="left">
         Inspiration From Our BLog
       </Heading>
+      <Link to="/products">
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(4, 1fr)" }}
         templateRows={{ base: "repeat(4,400px)", lg: "repeat(1,100px)" }}
@@ -166,11 +199,13 @@ Shop By Room
         </GridItem>
         <GridItem ><Image src="https://ii3.pepperfry.com/media/wysiwyg/banners/Hp_section10_web_04012023_4.jpg"/><Text fontSize='lg' color="#848484">8 Trends You Can Use This Holiday Season in Your Home | Read More </Text></GridItem>
       </Grid>
+      </Link>
       </Container>
       <Container maxW={"7xl"} marginTop="300px">
       <Heading as='h3' size='xl' textAlign="left">
         Customers Speaks
       </Heading>
+      <Link to="/products">
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(3, 1fr)" }}
         templateRows={{ base: "repeat(3,220px)", lg: "repeat(1,100px)" }}
@@ -184,11 +219,13 @@ Shop By Room
         </GridItem>
         <GridItem ><Image src="https://ii2.pepperfry.com/media/wysiwyg/banners/Testimonial_web_261221_9.jpg"/><Text fontSize='lg' >Purchased an ergonomic chair, I thought it would not be fitting for me but once it got delivered</Text></GridItem>
       </Grid>
+     </Link>
       </Container>
       <Container maxW={"7xl"} marginTop="200px">
       <Heading as='h3' size='xl' textAlign="left">
         Need Help Buying
       </Heading>
+      <Link to="/products">
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(6, 1fr)" }}
         templateRows={{ base: "repeat(6,350px)", lg: "repeat(1,100px)" }}
@@ -205,11 +242,13 @@ Shop By Room
         <GridItem ><Image src="https://ii2.pepperfry.com/media/wysiwyg/banners/hp_need_help_p_5.jpg"/><Text fontSize='lg' >What To Look For While Buying A Chair</Text></GridItem>
         <GridItem ><Image src="https://ii3.pepperfry.com/media/wysiwyg/banners/hp_need_help_p_6.jpg"/></GridItem>
       </Grid>
+      </Link>
       </Container>
       <Container maxW={"7xl"} marginTop="180px">
       <Heading as='h3' size='xl' textAlign="left">
         Recommended for you
       </Heading>
+      <Link to="/products">
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", lg:"repeat(6, 1fr)" }}
         templateRows={{ base:"repeat(6,400px)", lg:"repeat(1,100px)" }}
@@ -226,7 +265,9 @@ Shop By Room
         <GridItem ><Image src="https://ii1.pepperfry.com/media/catalog/product/h/a/494x544/harmony-solid-wood-folding-chair---set-of-2---in-honey-oak-finish-by-woodsworth-harmony-solid-wood-f-tkkwvj.jpg"/><Text fontSize='lg'>Harmony Solid Wood</Text><Text fontSize='xl' color="#ff7035">₹13,499</Text></GridItem>
         <GridItem ><Image src="https://ii1.pepperfry.com/media/catalog/product/f/a/494x544/fansy-folding-chair-in-blue-colour-by-pansy-furniture-fansy-folding-chair-in-blue-colour-by-pansy-fu-pzfivh.jpg"/><Text fontSize='lg'>Fansy Folding Chair in</Text><Text fontSize='xl' color="#ff7035">₹2,300</Text></GridItem>
       </Grid>
+      </Link>
       </Container>
+      <Footer />
     </div>
   );
 };
