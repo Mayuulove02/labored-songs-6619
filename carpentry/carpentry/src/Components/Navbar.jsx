@@ -14,16 +14,24 @@ import {
     Center,
     MenuDivider,
     MenuItem,
+    useColorMode,
+    Text,
+    useToast,
+    HStack,
     
   } from "@chakra-ui/react";
+  import styles from "./main.module.css";
+  import { MoonIcon, SunIcon } from '@chakra-ui/icons';
   import "./Navbar.css";
   import admin from "../utils/admin.gif"
   import { HamburgerIcon } from '@chakra-ui/icons';
   import { MdLiveHelp} from 'react-icons/md'
  import  {FiShoppingCart} from 'react-icons/fi'
- import {VscAccount} from "react-icons/vsc"
   import img from "../utils/Logo.png"
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthContextProvider";
+import { FaUserAlt } from "react-icons/fa";
  
 
 
@@ -31,6 +39,27 @@ import { NavLink } from "react-router-dom";
 
  export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
+    const { colorMode, toggleColorMode } = useColorMode();
+    const { userName, isAuth, logoutUser } = useContext(AuthContext);
+    console.log(isAuth)
+    const toast = useToast()
+    console.log(userName)
+
+    const LogOut_User = () => {
+
+      console.log("LOGOUT")
+      toast({
+          title: 'Logout User Successful.',
+
+          description: "Digi Shop",
+          status: 'warning',
+          duration: 3000,
+          isClosable: true,
+      })
+
+      logoutUser()
+  }
+
     return (
       <>
       <div className="topNav" style={{
@@ -80,42 +109,86 @@ import { NavLink } from "react-router-dom";
         
         
         </Box>
+        <Button onClick={toggleColorMode} variant="ghost">
+                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+        </Button>
         <MdLiveHelp style={{height:"30px", width:"50px"}}/>
         <Link to="/cart">
         <FiShoppingCart  style={{height:"30px", width:"50px"}}/>
         </Link>
-        <Menu >
-                <MenuButton
-                  as={Button}
-                  rounded={'full'}
-                  variant={'link'}
-                  cursor={'pointer'}
-                  minW={0}>
-                  {/* <Avatar
-                    size={'sm'}
-                    src={'https://avatars.dicebear.com/api/male/username.svg'}
-                  /> */}
-                 < VscAccount style={{height:"30px", width:"50px"}}/>
-                </MenuButton>
-                <MenuList alignItems={'center'}>
-                  <br />
-                  <Center>
-                    <Avatar
-                      size={'2xl'}
-                      src={admin}
-                    />
-                  </Center>
-                  <br />
-                  <Center>
-                    <p>Username</p>
-                  </Center>
-                  <br />
-                  <MenuDivider />
-                  <MenuItem>Admin Login</MenuItem>
-                  <MenuItem>User Login</MenuItem>
-                  <MenuItem>Logout</MenuItem>
-                </MenuList>
-              </Menu>
+        <Menu>
+                                    <MenuButton
+                                        as={Button}
+                                        rounded={'full'}
+                                        variant={'link'}
+                                        cursor={'pointer'}
+                                        minW={0}>
+                                        <Avatar
+                                            size={'sm'}
+                                            src={admin}
+                                        />
+                                    </MenuButton>
+                                    <MenuList alignItems={'center'}>
+                                        <br />
+                                        <Center>
+                                            <Avatar
+                                                size={'2xl'}
+                                                src={admin}
+                                            />
+                                        </Center>
+                                        <br />
+                                        <Center gap={4}>
+                                            <Text>Welcome To Carpentry</Text>
+                                        </Center>
+                                        <br />
+                                        <MenuDivider />
+                                        
+                                        
+                                        <MenuItem>{!isAuth && (
+                                        <NavLink
+                                            id={styles.loginButton}
+
+                                            to="/login"
+
+                                            className={styles.LogoutHOver}
+                                        >
+                                            Login
+                                        </NavLink>
+                                    )}</MenuItem>
+                                        
+                                        <MenuItem><div>
+
+{isAuth && (
+    <HStack justifyContent="space-around" style={{ textAlign: "center" }} >
+        <HStack justifyContent="space-around"  >
+            <p>
+
+                <FaUserAlt />
+            </p>
+            <div >
+
+                <p style={{ fontWeight: "bold" }}>
+                   Hi,{userName}
+                </p>
+            </div>
+            <p >
+
+            </p>
+
+            <button
+                onClick={LogOut_User}
+                className={styles.LogoutHOver}
+            >
+                Logout
+            </button>
+        </HStack>
+
+
+    </HStack>
+)}
+</div></MenuItem>
+                                    </MenuList>
+                                </Menu>
         <Box display={{ base: "block", md: "none" }} onClick={onToggle}>
           <HamburgerIcon
             aria-label="Open Navigation"
@@ -139,7 +212,8 @@ flexGrow={1}
 <div className="wrapper" >
   <ul className="nav-links">
     <li id="first">
-      <Link to="/products/beds">Furniture</Link>
+    
+      <Text>Furniture</Text>
       <div className="mega-box">
         <div className="content" >
           <div className="rowone">
@@ -246,9 +320,11 @@ flexGrow={1}
           </div>
         </div>
       </div>
+      
     </li>
     <li>
-      <Link to="/products/seettes">Recliners</Link>
+    
+      <Text>Recliners</Text>
       <div className="mega-box">
         <div className="content">
           <div className="rowone">
@@ -334,9 +410,11 @@ flexGrow={1}
           </div>
         </div>
       </div>
+      
     </li>
     <li>
-      <Link to="/"> Cabinetry</Link>
+   
+      <Text> Cabinetry</Text>
       <div className="mega-box">
         <div className="content">
           <div className="rowone">
@@ -422,9 +500,11 @@ flexGrow={1}
           </div>
         </div>
       </div>
+     
     </li>
     <li>
-      <Link to="/">Beds</Link>
+    
+      <Text>Beds</Text>
       <div className="mega-box">
         <div className="content">
           <div className="rowone">
@@ -524,9 +604,11 @@ flexGrow={1}
           </div>
         </div>
       </div>
+     
     </li>
     <li>
-      <Link to="/">Mattresses</Link>
+    
+      <Text>Mattresses</Text>
       <div className="mega-box">
         <div className="content">
           <div className="rowone">
@@ -641,9 +723,10 @@ flexGrow={1}
           </div>
         </div>
       </div>
+      
     </li>
     <li>
-      <Link to="/"> Furnishings</Link>
+      <Text> Furnishings</Text>
       <div className="mega-box">
         <div className="content">
           <div className="rowone">
@@ -742,7 +825,7 @@ flexGrow={1}
       </div>
     </li>
     <li>
-      <Link to="/">Decor</Link>
+      <Text>Decor</Text>
       <div className="mega-box">
         <div className="content">
           <div className="rowone">
@@ -859,7 +942,7 @@ flexGrow={1}
       </div>
     </li>
     <li>
-      <Link to="/"> Lighting</Link>
+      <Text> Lighting</Text>
       <div className="mega-box">
         <div className="content">
           <div className="rowone">
@@ -925,7 +1008,7 @@ flexGrow={1}
       </div>
     </li>
     <li>
-      <Link to="/">Appliances</Link>
+      <Text>Appliances</Text>
       <div className="mega-box">
         <div className="content">
           <div className="rowone">
@@ -991,7 +1074,7 @@ flexGrow={1}
       </div>
     </li>
     <li>
-      <Link to="/"> Modular</Link>
+      <Text> Modular</Text>
       <div className="mega-box">
         <div className="content">
           <div className="rowone">

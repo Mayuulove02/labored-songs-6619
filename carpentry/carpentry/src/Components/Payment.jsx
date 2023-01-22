@@ -3,7 +3,9 @@ import { useState } from "react";
 
 
 import {   useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 import { Loading } from "./Loading";
+import Navbar from "./Navbar";
 
 
 
@@ -48,6 +50,7 @@ export default function Payment() {
   
   return (
     <>
+    <Navbar />
       <Container maxW={'7xl'}>
   
   
@@ -202,6 +205,7 @@ export default function Payment() {
 
 
 </VStack>
+<Footer />
     </>
   );
 }

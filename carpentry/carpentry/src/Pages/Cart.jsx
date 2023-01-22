@@ -41,6 +41,8 @@ import {  useEffect,  useState } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import "./Cart.css";
 import { FiShoppingCart } from 'react-icons/fi';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 
 
@@ -70,6 +72,7 @@ export default function Cart() {
     }
     return (
     <div>
+      <Navbar />
         <Container maxW={'7xl'}>
     </Container>
     <Flex p={50} w="full" alignItems="center" justifyContent="center " gap={4}>
@@ -153,6 +156,7 @@ export default function Cart() {
   </NavLink>
 </Card>
 </Flex>
+<Footer />
     </div>
     );
   }
