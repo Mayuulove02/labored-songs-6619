@@ -51,7 +51,7 @@ import { FaUserAlt } from "react-icons/fa";
       toast({
           title: 'Logout User Successful.',
 
-          description: "Digi Shop",
+          description: "Carpentry",
           status: 'warning',
           duration: 3000,
           isClosable: true,
