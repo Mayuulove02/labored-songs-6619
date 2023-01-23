@@ -10,6 +10,7 @@ import Payment from "./Payment";
 import OrderConfirm from "./OrderConfirm";
 import Admin from "../Pages/Admin/Admin";
 import PrivateRoute from "./PrivateRoute";
+import PageNotFound from "../Pages/PageNotFound";
 
 const AllRoutes = () => {
   return (
@@ -23,6 +24,7 @@ const AllRoutes = () => {
             <Route path="/payments" element={<PrivateRoute><Payment /></PrivateRoute>}/>
             <Route path="/checkout" element={<PrivateRoute>< OrderConfirm/></PrivateRoute>}/>
             <Route path="/admin" element={<Admin />}/>
+            <Route path='*' element={<PageNotFound/>}></Route>
         </Routes>
     </div>
   )
